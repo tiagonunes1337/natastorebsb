@@ -1,0 +1,230 @@
+/* --- Estilos Gerais --- */
+body {
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background-color: #0f0f0f !important;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #222;
+}
+
+.navbar-brand img {
+    height: 35px;
+    transition: 0.3s;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.nav-link:hover {
+    color: #aaaaaa !important;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("img/imagem1.png");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    text-align: center;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.9) 100%);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.titulo {
+    font-size: clamp(2.2rem, 8vw, 4rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.descricao {
+    font-size: 1rem;
+    color: #d1d1d1;
+    line-height: 1.5;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* --- Mobile --- */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 80vh;
+        background-attachment: scroll;
+    }
+
+    .hero-content {
+        padding: 40px 15px;
+    }
+
+    .titulo {
+        letter-spacing: 0;
+        margin-bottom: 1rem;
+    }
+
+    .descricao {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+
+    .navbar-collapse {
+        background-color: #0f0f0f;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+}
+
+/* Navbar */
+.custom-nav {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #111;
+    padding: 15px 0;
+}
+
+.brand-insta {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 1.4rem;
+    color: #ffffff !important;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
+
+.btn-vendedor-insta {
+    background: none;
+    border: 1.5px solid #ffffff;
+    color: #ffffff;
+    padding: 6px 15px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-vendedor-insta:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* --- Cards do Catálogo --- */
+.img-container {
+    position: relative;
+    overflow: hidden;
+    background-color: #111;
+    border-radius: 8px;
+    aspect-ratio: 4 / 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-produto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card-produto:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.6);
+}
+
+/* Overlay com botão Ver mais */
+.overlay-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.card-produto:hover .overlay-card {
+    opacity: 1;
+}
+
+.overlay-card .btn {
+    border-radius: 0;
+    padding: 10px 28px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Texto dos cards */
+.card-title {
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+}
+
+.card-price {
+    font-size: 1.1rem;
+    color: #ffbb00 !important;
+}
+
+/* Brand Catálogo */
+.brand-catalogo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 50px;
+    color: #ffffff !important;
+    text-align: center;
+}
+
+/* Botão Ver mais exclusivo para mobile */
+.btn-mobile-ver-mais {
+    background: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 28px;
+    border-radius: 0;
+    transition: opacity 0.3s;
+}
+
+.btn-mobile-ver-mais:hover {
+    opacity: 0.85;
+    color: #000000;
+}
