@@ -97,4 +97,4 @@ Edite o texto dentro da tag `<p class="card-price fw-bold">` de cada card.
 
 ## 👨‍💻 Desenvolvimento
 
-Desenvolvido por **[seu nome aqui]** — front-end puro, sem frameworks JavaScript.
+Desenvolvido por **Tiago de Aquino Nunes** — front-end puro, sem frameworks JavaScript.
